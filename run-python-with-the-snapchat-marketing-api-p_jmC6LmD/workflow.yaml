@@ -1,0 +1,21 @@
+schema: workflow/2022.04
+name: Run Python with the Snapchat Marketing API
+triggers:
+- id: dc_gzujOq6
+- id: sub_PdUYNLz
+- id: sub_zdUv0PB
+- id: hi_71Hx4aB
+steps:
+- namespace: code
+  runtime: python3.9
+  uses: "./code/entry.py"
+  props:
+    __configurableProps:
+    - type: app
+      app: snapchat_marketing
+      name: snapchat_marketing
+      authType: oauth
+      appId: app_Oz6hd2
+    snapchat_marketing:
+      authProvisionId: apn_0Whpv7O
+
