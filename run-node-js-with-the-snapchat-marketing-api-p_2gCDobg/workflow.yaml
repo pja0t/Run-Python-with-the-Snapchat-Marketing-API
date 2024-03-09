@@ -1,0 +1,7 @@
+schema: workflow/2022.04
+name: Run Node.js with the Snapchat Marketing API
+settings:
+  error_notification: true
+triggers:
+- id: dc_gzujOq6
+

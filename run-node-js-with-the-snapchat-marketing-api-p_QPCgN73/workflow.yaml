@@ -1,0 +1,27 @@
+schema: workflow/2022.04
+name: Run Node.js with the Snapchat Marketing API
+settings:
+  error_notification: true
+triggers:
+- id: sub_4WU0JKB
+- id: sub_6KUmKeL
+steps:
+- namespace: snapchat
+  runtime: nodejs20.x
+  uses: "./snapchat/entry.js"
+  props:
+    __configurableProps:
+    - type: app
+      app: snapchat_marketing
+      name: snapchat_marketing
+      authType: oauth
+      appId: app_Oz6hd2
+    snapchat_marketing:
+      authProvisionId: apn_0Whpv7O
+- namespace: snapchat_marketingg
+  runtime: nodejs20.x
+  uses: "./snapchat_marketingg/entry.js"
+  props:
+    snapchat_marketing:
+      authProvisionId: apn_0Whpv7O
+
